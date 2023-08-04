@@ -5,7 +5,7 @@ import { avatar } from "../data/images";
 
 export default function Hero() {
   return (
-    <Container>
+    <Container mb={55}>
       <Grid justify="center" gutter={16}>
         <Grid.Col span="auto">
           <Image height={200} src={avatar} withPlaceholder />
