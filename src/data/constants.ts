@@ -1,8 +1,13 @@
 import { LinkType, Project } from "../interfaces/interfaces";
 import { projectHero1 } from "./images";
 
+const ROUTES = {
+  HOME: "home",
+};
 const fullName = "Chai Shorr";
-const links: LinkType[] = [{ label: "Home", link: "./home" }];
+
+const LINKS: LinkType[] = [{ label: "Home", link: ROUTES.HOME }];
+
 const projects: Project[] = [
   {
     id: "project-1",
@@ -12,4 +17,4 @@ const projects: Project[] = [
   },
 ];
 
-export { fullName, links, projects };
+export { ROUTES, fullName, LINKS, projects };

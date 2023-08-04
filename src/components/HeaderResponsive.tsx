@@ -12,6 +12,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { fullName } from "../data/constants";
+import { useNavigate } from "react-router-dom";
 
 const HEADER_HEIGHT = rem(60);
 
@@ -99,6 +100,7 @@ interface HeaderResponsiveProps {
 }
 
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
+  const navigate = useNavigate();
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
@@ -114,6 +116,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
         event.preventDefault();
         setActive(link.link);
         close();
+        navigate(link.link)
       }}
     >
       {link.label}
