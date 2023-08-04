@@ -8,6 +8,7 @@ import { useHotkeys, useLocalStorage } from "@mantine/hooks";
 import { HeaderResponsive } from "./components/HeaderResponsive";
 import { links } from "./data/constants";
 import Hero from "./components/Hero";
+import ProjectsCarousel from "./components/ProjectsCarousel/ProjectsCarousel";
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -32,6 +33,7 @@ function App() {
       >
         <HeaderResponsive links={links} />
         <Hero />
+        <ProjectsCarousel/>
       </MantineProvider>
     </ColorSchemeProvider>
   );

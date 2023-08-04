@@ -1,3 +1,3 @@
 import avatar from "../assets/avatar.svg";
-
-export { avatar };
+import projectHero1 from "../assets/project-hero-1.png";
+export { avatar, projectHero1 };
